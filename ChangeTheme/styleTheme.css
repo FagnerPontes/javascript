@@ -1,0 +1,164 @@
+/* Editar arquivo styleTheme */
+
+/* Criar variaveis responsaveis pela mudanca de tema */
+:root {
+  --backColor1: #0f0f14; /*cor para bacgroud-color de elementos*/
+  --backColor2: #19191e; /*cor para bacgroud-color de elementos*/
+  --color1: #ccc; /*cor para fonte*/
+  --colorHover: #fff; /*cor para fonte ao passar mouse sobre elemento*/
+  --backgroundButton1: #223366; /*cor para bacgroud-color de botao*/
+  --backgroundButton2: #001144; /*cor para bacgroud-color de botao*/
+  --backgroundButton3: #757575; /*cor para bacgroud-color de botao*/
+  --fontSizeRoot1: 16px; /*tamanho da fonte padrao*/
+  --border1: 1px solid #282828; /*borda para elementos*/
+  --divTopHeigth: 3.5rem; /*altura do cabecaho*/
+  --divBottomHeigth: 2rem; /*altura do rodape*/
+}
+
+/* resetar algumas propriedade css */
+* {
+  box-sizing: border-box; /*border e padding incluidos ao tamanho do elemento*/
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: Helvetica, sans-serif;
+}
+
+html {
+  font-size: var(--fontSizeRoot1);/*tamanho da fonte padrao para o root (rem) */
+  color: var(--color1);  /*cor da fonte padrao para os elementos*/
+}
+
+/* cabecalho */
+#myHeader {
+  position: fixed; /*posicao relativa a janela*/
+  top: 0;
+  left: 0;
+  width: 100vw;
+  display: flex; /*modo flexivel para organizacao dos elementos filhos*/
+  height: var(--divTopHeigth); /*variavel tematica*/
+  background-color: var(--backColor1); /*variavel tematica*/
+}
+
+/* propriedades do paragrafo no cabecalho */
+#myHeader p {
+  font-size: 2rem; /*duas vezes o tamanho da fonte padrao*/
+  display: flex;
+  flex: 1; /*ocupar todo espaco disponivel*/
+  align-items: center; /*alinhamanto horizontal*/
+  justify-content: center; /*alinhamento vertical*/
+}
+
+/* propriedades do botao no cabecalho */
+#myHeader button {
+  width: var(--divTopHeigth); /*variavel tematica*/
+  height: var(--divTopHeigth); /*variavel tematica*/
+  background-color: var(--backColor1); /*variavel tematica*/
+  font-size: 2rem;
+  color: var(--color1); /*variavel tematica*/
+  border-radius: 10px; /*borda arredondada*/
+  transition: .3s; /*efeito de suavisacao ao realizar mudanca no estilo*/
+  cursor: pointer; /*estilo do mouse*/
+}
+
+/* propriedades do botao no cabecalho ao passar o mouse */
+#myHeader button:hover {
+  border: var(--border1); /*variavel tematica*/
+  color: var(--colorHover); /*variavel tematica*/
+}
+
+/* propriedade do botao desativado no cabecalho */
+#myHeader button:disabled {
+  background-color: var(--backgroundButton3); /*variavel tematica*/
+}
+
+/* proprieades do rodape */
+#myFooter {
+  position: fixed;
+  bottom: 0;
+  left: 0vw;
+  width: 100vw;
+  height: var(--divBottomHeigth); /*variavel tematica*/
+  background-color: var(--backColor1); /*variavel tematica*/
+  display: flex;
+  justify-content: center;
+}
+
+/* proprieades do container que abriga os menus e a area de conteudo*/
+#myDivContainer {
+  position: fixed;
+  top: var(--divTopHeigth); /*variavel tematica*/
+  left: 0;
+  width: 100vw;
+  height: calc(100vh - var(--divTopHeigth) - var(--divBottomHeigth)); /*alrua central = janela - cabecalho - rodape*/
+  border-top: var(--border1); /*variavel tematica*/
+  border-bottom: var(--border1); /*variavel tematica*/
+  overflow: auto; /*fixar tamanho exibindo scrollbar quando necessaio*/
+  display: flex;
+  flex-direction: row; /*alinhar elementos lado a lado*/
+}
+
+/* propriedades do menu esquerdo */
+#myDivLeft {
+  min-height: 100%; /*altura minima (pai possui dispplay: flex)*/
+  background-color: var(--backColor2); /*variavel tematica*/
+  z-index: 100; /*nivel de visibilidade*/
+  overflow-x: hidden; /*ocultar elemento se for maior que o comprimento*/
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column; /*alinhar elementos um sobre o outro*/
+  align-items: center;
+  width: 20%;
+}
+
+/* propriedades dos botoes no menu esquerdo */
+#myDivLeft button {
+  width: 19vw;
+  min-height: 2rem;
+  margin-top: .5rem;
+  padding-left: .5rem;
+  text-align: left;
+  font-size: 1rem;
+  color: var(--color1); /*variavel tematica*/
+  background-color: var(--backgroundButton1); /*variavel tematica*/
+  border: var(--border1); /*variavel tematica*/
+  border-radius: 10px;
+  transition: .3s;
+}
+
+/* propriedades dos botoes no menu esquerdo ao passar o mouse*/
+#myDivLeft button:hover {
+  background-color: var(--backgroundButton2); /*variavel tematica*/
+}
+
+/* propriedades dos botoes no menu esquerdo ao clicar */
+#myDivLeft button:active {
+  background-color: var(--backgroundButton3); /*variavel tematica*/
+  color: var(--backColor1); /*variavel tematica*/
+}
+
+/* proprieade da area de conteudo */
+#myDivCenter {
+  min-height: 100%;
+  border-left: var(--border1); /*variavel tematica*/
+  border-right: var(--border1); /*variavel tematica*/
+  background-color: var(--backColor1); /*variavel tematica*/
+  z-index: 99; /*visibilidade inferior aos menus*/
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  overflow: auto;
+}
+
+/* proprieade do menu direito */
+#myDivRight {
+  min-height: 100%;
+  background-color: var(--backColor2); /*variavel tematica*/
+  z-index: 100;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: flex;
+  justify-content: center;
+  width: 20%;
+}
