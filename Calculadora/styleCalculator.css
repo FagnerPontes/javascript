@@ -1,0 +1,96 @@
+:root {
+  --backColor1: #0f0f14;
+  --color1: #ccc;
+  --fontSizeRoot1: 18px;
+  --backgroundButton1: #223366;
+  --backgroundButton2: #001144;
+  --border: 2px solid #fa4455;
+  --radius: 15px
+}
+
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: Helvetica, sans-serif;
+}
+
+html {
+  font-size: var(--fontSizeRoot1);
+  color: var(--color1);
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+#calcContainer {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+#divCalculator {
+  border: var(--border);
+  border-radius: var(--radius);
+}
+
+#divDisplay {
+  color: var(--color1);
+  text-align: right;
+  padding: 0.5rem;
+  margin: 1rem;
+  border: var(--border);
+  border-radius: var(--radius);
+  height: 4.5rem;
+}
+
+#divKeys {
+  margin: 1rem;
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+#divKeys button {
+  font-size: 1rem;
+  min-width: 3.5rem;
+  height: 3.5rem;
+  color: var(--color1);
+  background-color: var(--backgroundButton1);
+  border-radius: var(--radius);
+  transition: .3s;
+}
+
+#divKeys button:hover {
+  background-color: var(--backgroundButton2);
+  border: var(--border);
+}
+
+#divKeys button:focus {
+  background-color: var(--backgroundButton2);
+  border: var(--border);
+}
+
+#divKeys button:active {
+  color: var(--backgroundButton2);
+  background-color: var(--color1);
+}
+
+#buttonKeyErase {
+  grid-column: 1 /span 2;
+}
+
+#buttonKeyEqual {
+  grid-column: 3 /span 2;
+}
+
+.backgroundColor {
+  background-color: var(--backColor1);
+}
