@@ -1,0 +1,46 @@
+<!-- Estudo sobre propriedade css display: flex; -->
+<!-- elemento filho: Definir largura e expandir altura até a margem -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>exemplo3</title>
+	<style>
+		/*resetar propriedade globais:*/
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		/*(elemento pai)*/
+		body {
+			/*display flexível para elementos filhos*/
+			display: flex;
+			/*altura = 100% da janela*/
+			height: 100vh;
+			/*largura = 100% da janela*/
+			width: 100vw;
+			/*cor de fundo azul*/
+			background-color: blue;
+		}
+
+		/*(elemento filho) definir largura e expandir altura até a margem*/
+		div {
+			/*largura de 200 pixels*/
+			width: 200px;
+			/*margens superior e inferior de 50 pixels, margens laterais automáticas*/
+			margin: 50px auto;
+			/*cor de fundo vermelha*/
+			background-color: red;
+		}
+	</style>
+</head>
+
+<body>
+	<div>
+	</div>
+</body>
+
+</html>
