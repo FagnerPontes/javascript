@@ -1,0 +1,65 @@
+/*Editar arquivo style.css*/
+/*documentação: https://developer.mozilla.org/pt-BR/docs/Web/CSS/animation*/
+/*estilo do campo de exibição de informações*/
+#divLog {
+  width: 25rem;/*proporcional ao tamanho da fonte padrão*/
+  height: 2rem;/*duas vezes o tamanho da fonte padrão*/
+  border: 2px solid black;/*borda*/
+  margin: 0.2rem;/*margem de 0.2 vezes o tamanho da fonte*/
+  padding: 0.2rem;/*afastamento interno de 0.2 vezes o tamanho da fonte*/
+  border-radius: 10px;/*arredondamento de 10 pixels*/
+  display: flex;/*display flexível*/
+  align-items: center;/*alinhamento vertical centralizado*/
+}
+
+/*estilo do objeto que será animado*/
+#myCircle {
+  margin-left: 50px;/*margem esquerda de 50 pixels*/
+  margin-top: 50px;/*margem superior de 50 pixels*/
+  height: 100px;/*altura de 100 pixels*/
+  width: 100px;/*largura de 100 pixels*/
+  position: absolute;/*posição absoluta referente ao elemento pai*/
+  border-radius: 50%;/*aredendamento de 50%*/
+  background-color: yellow;/*cor de fundo amarela*/
+}
+
+/*classe responsável pela animação*/
+.active {
+  animation-name: slidein;/*nome da animação*/
+  animation-duration: 2s;/*duração da animação*/
+  animation-iteration-count: 2;/*quantidade de iterações da animação*/
+  animation-timing-function: ease /*linear; tipo de progressão da animação*/
+}
+
+/*animação*/
+@keyframes slidein {
+  0% {/*inicio da ainimação*/
+    margin-left: 50px;
+    margin-top: 50px;
+    background-color: yellow;
+  }
+
+  25% {/*25% da animação*/
+    margin-left: 250px;/*mover objeto 200 pixel para direita*/
+    margin-top: 50px;
+    background-color: red;/*mudar cor para vermelho*/
+  }
+
+  50% {/*50% da animação*/
+    margin-left: 250px;
+    margin-top: 250px;/*movel objeto 200 pixels para baixo*/
+    background-color: blue;/*mudar cor para azul*/
+  }
+
+  75% {/*75% da animação*/
+    margin-left: 50px;/*mover objeto 200 pixels para esquerda*/
+    margin-top: 250px;
+    background-color: green;/*mudar cor para verde*/
+  }
+
+  100% {
+    margin-left: 50px;
+    margin-top: 50px;/*mover objeto 200 pixels para cima*/
+    background-color: yellow;/*mudar cor para amarelo*/
+  }
+}
