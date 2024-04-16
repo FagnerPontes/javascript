@@ -21,7 +21,7 @@ else
 if (myDiv.style.borderRadius != '')
  pLog.innerText += `.\n ${myDiv.style.borderRadius}`;
 else
- pLog.innerText += '.\n borderRadius não encontrado';
+ pLog.innerText += '.\n border-radius não encontrado';
 
 //tentando acessar estilo da tag head com style.property (Não funciona):
 if (myDiv.style.height != '')
