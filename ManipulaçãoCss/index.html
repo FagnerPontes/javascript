@@ -1,0 +1,35 @@
+<!-- Manipulação de propriedade css com JavaScript -->
+<!--
+  Para esse exemplo foi utilizado:
+    - Uma classe de estilos para a div entre as tags <head></head>.
+    - Aplicação de estilo diretamente na tag div.
+    - Um arquivo externo com variáveis de estilos para a div.
+-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='style.css' rel='stylesheet' type='text/css' />
+  <script src='script.js' type='text/javascript' defer></script>
+  <style>
+    .divClass {
+      height: 200px;
+      width: 200px;
+    }
+  </style>
+  <title>Manipular css</title>
+</head>
+
+<body>
+  <div id='myDiv' class='divClass' style='font-size: 20px;'></div>
+  <!--
+    Depois realize o teste com as propriedade definidas na div:
+    Exclua a div acima e utilize a div abaixo que está comentada!
+  -->
+  <!-- <div id='myDiv' class='divClass' style='font-size: 20px; border-radius: 25%; height: 200px'></div> -->
+  <p id='pLog'></p>
+</body>
+
+</html>

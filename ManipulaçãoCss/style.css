@@ -1,0 +1,25 @@
+:root {
+  --backColor: #ff0000;/*vermelho*/
+  --myBorder: 3px solid #0000ff;/*azul*/
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-color: var(--backColor);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+	width: 100vw;
+}
+
+#myDiv {
+  background-color: var(--backColor);
+  border: var(--myBorder);
+  border-radius: 25%;
+  margin: 0 auto;
+}
