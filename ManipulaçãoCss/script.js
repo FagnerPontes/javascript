@@ -21,7 +21,7 @@ else
 if (myDiv.style.borderRadius != '')
  pLog.innerText += `.\n ${myDiv.style.borderRadius}`;
 else
- pLog.innerText += '.\n border-radius não encontrado';
+ pLog.innerText += '.\n borderRadius não encontrado';
 
 //tentando acessar estilo da tag head com style.property (Não funciona):
 if (myDiv.style.height != '')
@@ -50,7 +50,7 @@ else
 if (getComputedStyle(myDiv).getPropertyValue('border-radius') != '')
  pLog.innerText += `.\n ${getComputedStyle(myDiv).getPropertyValue('border-radius')}`;
 else
- pLog.innerText += '.\n borderRadius não encontrado';
+ pLog.innerText += '.\n border-radius não encontrado';
 
 //tentando acessar estilo da tag head com getPropertValur('propriedade'):
 if (getComputedStyle(myDiv).getPropertyValue('height') != '')
