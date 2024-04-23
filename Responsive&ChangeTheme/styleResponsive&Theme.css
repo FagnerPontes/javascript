@@ -47,7 +47,7 @@ html {
   font-size: 2rem; /*duas vezes o tamanho da fonte padrão*/
   display: flex; /*modo flexível para organização dos elementos filhos*/
   flex: 1; /*ocupar todo espaço disponível*/
-  align-items: center; /*alinhamanto horizontal central*/
+  align-items: center; /*alinhamanto vertical central*/
 }
 
 /* botão no cabeçalho */
@@ -81,7 +81,8 @@ html {
   height: var(--footerHeigth); /*altura igual à variável temática*/
   background-color: var(--backColor1); /*cor de fundo igual à variável temática*/
   display: flex; /*modo flexível para organização dos elementos filhos*/
-  justify-content: center; /*alinhamento vertical central*/
+  justify-content: center; /*alinhamento horizontal central*/
+  align-items: center; /*alinhamanto vertical central*/
 }
 
 /* container que abriga os menus e a área de conteúdo */
@@ -107,7 +108,7 @@ html {
   overflow-y: auto; /*fixar tamanho e exibir scrollbar se elemento filho for maior*/
   display: flex; /*modo flexível para organização dos elementos filhos*/
   flex-direction: column; /*alinhar elementos um sobre o outro*/
-  align-items: center; /*alinhamanto horizontal central*/
+  align-items: center; /*alinhamanto vertical central*/
   border-left: var(--border1); /*borda esquerda igual à variável temática*/
   border-right: var(--border1); /*borda direita igual à variável temática*/
   /*width: -> largura será manipulada pelo scriptMenuAnimation.js*/
