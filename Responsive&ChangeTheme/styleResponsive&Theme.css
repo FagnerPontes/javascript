@@ -167,12 +167,12 @@ html {
 @media only screen and (max-width: 799px) {
   #myDivContainer {
     flex-direction: column; /*Direção dos elementos filhos*/
-	}
+  }
 
   #myDivLeft {
     position: absolute; /*posição fixa em relação ao pai (myDivContainer)*/
     left: 0; /*fixado na posição left (esquerda) = 0*/
-	}
+  }
 
   #myDivCenter {
     position: absolute; /*posição fixa em relação ao pai (myDivContainer)*/
@@ -188,7 +188,7 @@ html {
   /*qualquer elemento filho de .divMenu*/
   .divMenu *{
     width: calc(100vw - 2rem); /*largura igual à 100% da largura da janela - 2rem*/
-	}
+  }
 }
 
 /*tela monitor (maiores que 800px)*/
