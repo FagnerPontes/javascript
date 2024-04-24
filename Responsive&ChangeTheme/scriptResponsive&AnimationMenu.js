@@ -29,7 +29,7 @@ else {
 // Modificar layout da página caso seja redimencionada -> evento(resize)
 onresize = (event) => {
   //caso a largura da janela seja menor que 800px (mobile) -> fechar os menus
-  if (windowWidth < 800) {
+  if (event.target.innerWidth < 800) {
     myDivLeft.classList.replace('open', 'close'); //substituir .open por .close
     myDivRight.classList.replace('open', 'close'); //substituir .open por .close
     document.documentElement.style.setProperty('--menuWidth', '100%'); //variável css (--menuWidth):
@@ -61,7 +61,7 @@ function SliceMenu(myDivMenu1, myDivMenu2) {
   (myDivMenu1.classList.contains('open')) ?
     myDivMenu1.classList.add('closeDivMenu') :
     myDivMenu1.classList.add('openDivMenu');
-  if (windowWidth < 800) { //se for mobile:
+  if (window.innerWidth < 800) { //se for mobile:
     if (myDivMenu2.classList.contains('open')) //verifique se o outro menu está aberto
       myDivMenu2.classList.add('closeDivMenu'); //feche o outro menu
   }
