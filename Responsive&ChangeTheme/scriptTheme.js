@@ -1,9 +1,9 @@
-//Botão que irá realizar a mudança de tema:
 /* 
 !!!Atenção!!!
  Para o navegador armazenar o Cookie ele deve estar em um servidor!
  Utilize o Live Server no vsCode para textar o código!!!
 */
+//Botão que irá realizar a mudança de tema:
 const buttonTheme = document.getElementById('buttonTheme');
 
 var myTheme = '';//variável com informação sobre o tema escolhido
