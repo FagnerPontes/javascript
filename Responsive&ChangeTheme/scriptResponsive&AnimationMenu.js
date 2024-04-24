@@ -29,7 +29,7 @@ else {
 // Modificar layout da página caso seja redimencionada -> evento(resize)
 onresize = (event) => {
   //caso a largura da janela seja menor que 800px (mobile) -> fechar os menus
-  if (windowWidth < 800) {
+  if (event.target.innerWidth < 800) {
     myDivLeft.classList.replace('open', 'close'); //substituir .open por .close
     myDivRight.classList.replace('open', 'close'); //substituir .open por .close
     document.documentElement.style.setProperty('--menuWidth', '100%'); //variável css (--menuWidth):
