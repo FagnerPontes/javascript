@@ -1,0 +1,51 @@
+/* Editar arquivo styleMenuAnimation.css */
+
+:root {
+  --menuWidth: 100%; /*Variável que definirá a largura dos menus*/
+}
+
+/*largura para quando o menu for aberto*/
+.open {
+  width: var(--menuWidth);
+}
+
+/*largura para quando o menu for fechado*/
+.close {
+  width: 0;
+}
+
+/*propriedades da animação para quando o menu for aberto*/
+.openDivMenu {
+  animation-name: slideInMenu;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+}
+
+/*propriedades da animação para quando o menu for fechado*/
+.closeDivMenu {
+  animation-name: slideOutMenu;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+}
+
+/*animação para abrir o menu*/
+@keyframes slideInMenu {
+  0% {
+    width: 0;
+	}
+
+  100% {
+    width: var(--menuWidth);
+  }
+}
+
+/*animação para fechar o menu*/
+@keyframes slideOutMenu {
+  from {
+    width: var(--menuWidth);
+  }
+
+  to {
+    width: 0;
+  }
+}

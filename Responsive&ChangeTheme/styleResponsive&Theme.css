@@ -1,0 +1,204 @@
+/* Editar arquivo styleTheme.css */
+
+/* variáveis responsáveis pelo tema */
+:root {
+  --backColor1: #0f0f14; /*cor para bacgroud-color*/
+  --backColor2: #19191e; /*cor para bacgroud-color*/
+  --backColor3: #757575; /*cor para bacgroud-color*/
+  --color1: #ccc; /*cor para fonte*/
+  --colorHover: #fff; /*cor para fonte ao passar mouse*/
+  --fontSizeRoot1: 16px; /*tamanho da fonte padrão*/
+  --border1: 2px solid #282828; /*borda*/
+  --border2: 2px solid #757575; /*borda*/
+  --headerHeigth: 3.5rem; /*altura do cabeçalho*/
+  --footerHeigth: 2rem; /*altura do rodapé*/
+  --menuButtonHeight: 2.5rem; /*altura do botão dentro do menu*/
+}
+
+/* resetar algumas propriedade css */
+* {
+  box-sizing: border-box; /*border e padding incluidos ao tamanho do elemento*/
+  text-decoration: none; /*remover estilos de texto*/
+  margin: 0; /*remover margens padrões*/
+  padding: 0; /*remover afastamentos padrões*/
+  border: 0; /*remover bordas padrões*/
+  font-family: Helvetica, sans-serif; /*fonte padrão*/
+}
+
+html {
+  font-size: var(--fontSizeRoot1); /*tamanho da fonte padrão (rem) */
+  color: var(--color1); /*cor da fonte padrão*/
+}
+
+/* cabeçalho */
+#myHeader {
+  position: fixed; /*posição fixa relativa a janela*/
+  top: 0; /*fixado na posição top (superior) = 0*/
+  left: 0; /*fixado na posição left (esquerda) = 0*/
+  width: 100vw; /*largura igual à 100% da largura da janela*/
+  display: flex; /*modo flexível para organização dos elementos filhos*/
+  height: var(--headerHeigth); /*altura igual à variável temática*/
+  background-color: var(--backColor1); /*cor de fundo igual à variável temática*/
+}
+
+/* parágrafo no cabeçalho */
+#myHeader p {
+  margin-left: 1rem; /*margem esquerda igual ao tamanho da fonte padrão*/
+  font-size: 2rem; /*duas vezes o tamanho da fonte padrão*/
+  display: flex; /*modo flexível para organização dos elementos filhos*/
+  flex: 1; /*ocupar todo espaço disponível*/
+  align-items: center; /*alinhamanto vertical central*/
+}
+
+/* botão no cabeçalho */
+#myHeader button {
+  width: var(--headerHeigth); /*largura igual à variável temática*/
+  height: var(--headerHeigth); /*altura igual à variável temática*/
+  background-color: var(--backColor1); /*cor de fundo igual à variável temática*/
+  font-size: 2rem; /*tamanho da fonta igual à duas vezes o tamanho padrão*/
+  color: var(--color1); /*cor da fonte igual à variável temática*/
+  border-radius: 10px; /*arredondamento da borda igual à 10 pixels*/
+  cursor: pointer; /*estilo do mouse*/
+}
+
+/* botão no cabeçalho ao passar o mouse */
+#myHeader button:hover {
+  border: var(--border2); /*borda igual à variável temática*/
+  color: var(--colorHover); /*cor da fonte igual à variável temática*/
+}
+
+/* botão desativado no cabeçalho */
+#myHeader button:disabled {
+  background-color: var(--backColor3); /*cor de fundo igual à variável temática*/
+}
+
+/* rodapé */
+#myFooter {
+  position: fixed; /*posição fixa relativa a janela*/
+  bottom: 0; /*fixado na posição bottom (inferior) = 0*/
+  left: 0vw; /*fixado na posição left (esquerda) = 0*/
+  width: 100vw; /*largura igual à 100% da largura da janela*/
+  height: var(--footerHeigth); /*altura igual à variável temática*/
+  background-color: var(--backColor1); /*cor de fundo igual à variável temática*/
+  display: flex; /*modo flexível para organização dos elementos filhos*/
+  justify-content: center; /*alinhamento vertical central*/
+  align-items: center; /*alinhamanto vertical central*/
+}
+
+/* container que abriga os menus e a área de conteúdo */
+#myDivContainer {
+  position: fixed; /*posição fixa relativa a janela*/
+  top: var(--headerHeigth); /*fixado na posição top (superior) igual à variável temática*/
+  left: 0; /*fixado na posição left (esquerda) = 0*/
+  width: 100vw; /*largura igual à 100% da largura da janela*/
+  height: calc(100vh - var(--headerHeigth) - var(--footerHeigth)); /*altura = janela - cabeçalho - rodapé*/
+  border-top: var(--border1); /*borda superior igual à variável temática*/
+  border-bottom: var(--border1); /*borda inferior igual à variável temática*/
+  overflow: auto; /*fixar tamanho e exibir scrollbar se elemento filho for maior*/
+  display: flex; /*modo flexível para organização dos elementos filhos*/
+  /*flex-direction: será definido no @media (Responsividade)*/
+}
+
+/* menus */
+.divMenu {
+  height: 100%; /*altura igual à 100% do elemento pai (#myDivContainer)*/
+  background-color: var(--backColor2); /*cor de fundo igual à variável temática*/
+  z-index: 100; /*nivel de visibilidade no eixo z (profundidade - eixo frontal)*/
+  overflow-x: hidden; /*fixar tamanho e ocultar elemento filho se for maior*/
+  overflow-y: auto; /*fixar tamanho e exibir scrollbar se elemento filho for maior*/
+  display: flex; /*modo flexível para organização dos elementos filhos*/
+  flex-direction: column; /*alinhar elementos um sobre o outro*/
+  align-items: center; /*alinhamanto vertical central*/
+  border-left: var(--border1); /*borda esquerda igual à variável temática*/
+  border-right: var(--border1); /*borda direita igual à variável temática*/
+  /*width: -> largura será manipulada pelo scriptMenuAnimation.js*/
+}
+
+/* qualquer elemento filho de .divMenu*/
+.divMenu *{
+  margin-top: 0.5rem; /*margem superior igual à metade do tamanho padrão*/
+  font-size: 1rem; /*tamanho da fonte igual ao tamanho da fonte padrão*/
+  color: var(--color1); /*cor da fonte igual à variável temática*/
+  background-color: var(--backColor2); /*cor de fundo igual à variável temática*/
+  border-radius: 6px; /*arredondamento da borda igual à 10 pixels*/
+  /*width: -> largura será manipulada pelo @media (Responsividade)*/
+}
+
+/* botões no menu esquerdo */
+#myDivLeft button {
+  min-height: var(--menuButtonHeight); /*altura mínima do botão igual à variável temática*/
+  padding-left: .5rem; /*afastamento esquerdo igual à metade do tamanho padrão*/
+  text-align: left; /*texto alinhado à esquerda*/
+}
+
+/* botões no menu esquerdo ao passar o mouse*/
+#myDivLeft button:hover {
+  border: var(--border2);
+  background-color: var(--backColor1); /*cor de fundo igual à variável temática*/
+}
+
+/* botões no menu esquerdo ao clicar */
+#myDivLeft button:active {
+  background-color: var(--backColor3); /*cor de fundo igual à variável temática*/
+  color: var(--backColor1); /*cor da fonte igual à variável temática*/
+}
+
+/* área de conteúdo */
+#myDivCenter {
+  height: 100%; /*altura igual à 100% do elemento pai (#myDivContainer)*/
+  background-color: var(--backColor1); /*cor de fundo igual à variável temática*/
+  z-index: 99; /*nivel de visibilidade inferior aos menus (profundidade - eixo frontal)*/
+  flex: 1; /*ocupar todo espaço disponível*/
+  display: flex; /*modo flexível para organização dos elementos filhos*/
+  justify-content: center; /*alinhamento horizontal central*/
+  overflow: auto; /*fixar tamanho e exibir scrollbar se elemento filho for maior*/
+}
+
+/* divisões dentro do menu direito */
+#myDivRight div{
+  min-height: 10rem; /*altura mínima da divisão*/
+  border: var(--border2); /*borda direita igual à variável temática*/
+  text-align: center; /*texto alinhado no centro*/
+}
+
+/*((((((((((RESPONSIVIDADE))))))))))*/
+
+/*tela mobile (menores que 800px)*/
+@media only screen and (max-width: 799px) {
+  #myDivContainer {
+    flex-direction: column; /*Direção dos elementos filhos*/
+	}
+
+  #myDivLeft {
+    position: absolute; /*posição fixa em relação ao pai (myDivContainer)*/
+    left: 0; /*fixado na posição left (esquerda) = 0*/
+	}
+
+  #myDivCenter {
+    position: absolute; /*posição fixa em relação ao pai (myDivContainer)*/
+    left: 0; /*fixado na posição left (esquerda) = 0*/
+    width: 100%; /*largura igual à 100% do elmento pai*/
+  }
+
+  #myDivRight {
+    position: absolute; /*posição fixa em relação ao pai (myDivContainer)*/
+    right: 0; /*fixado na posição right (direita) = 0*/
+  }
+
+  /*qualquer elemento filho de .divMenu*/
+  .divMenu *{
+    width: calc(100vw - 2rem); /*largura igual à 100% da largura da janela - 2rem*/
+	}
+}
+
+/*tela monitor (maiores que 800px)*/
+@media only screen and (min-width: 800px) {
+  #myDivContainer {
+    flex-direction: row; /*Direção dos elementos filhos*/
+  }
+
+  /*qualquer elemento filho de .divMenu*/
+  .divMenu *{
+    width: 14rem; /*largura igual à 14 vezes o tamanho da fonte padrão*/
+  }
+}
