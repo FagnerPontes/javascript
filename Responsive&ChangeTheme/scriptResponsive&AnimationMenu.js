@@ -61,7 +61,7 @@ function SliceMenu(myDivMenu1, myDivMenu2) {
   (myDivMenu1.classList.contains('open')) ?
     myDivMenu1.classList.add('closeDivMenu') :
     myDivMenu1.classList.add('openDivMenu');
-  if (windowWidth < 800) { //se for mobile:
+  if (window.innerWidth < 800) { //se for mobile:
     if (myDivMenu2.classList.contains('open')) //verifique se o outro menu está aberto
       myDivMenu2.classList.add('closeDivMenu'); //feche o outro menu
   }
