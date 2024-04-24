@@ -1,6 +1,9 @@
 /* 
 Este script foi copiado do link:
 https://www.w3schools.com/js/js_cookies.asp
+!!!Atenção!!!
+ Para o navegador armazenar o Cookie ele deve estar em um servidor!
+ Utilize o Live Server no vsCode para textar o código!!!
 */
 
 //Metódo responsável por criar o Cookie:
