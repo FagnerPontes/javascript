@@ -1,0 +1,114 @@
+/*Editar arquivo styleCalculator.css*/
+
+/* Criar variáveis */
+:root {
+  --backColor1: #0f0f14; /*cor de fundo*/
+  --color1: #ccc; /*cor da fonte*/
+  --fontSizeRoot1: 18px; /*tamanho da fonte padrão*/
+  --backgroundButton1: #223366; /*cor de fundo*/
+  --backgroundButton2: #001144; /*cor de fundo*/
+  --border: 2px solid #fa4455; /*borda*/
+  --radius: 15px/*arredondamento*/
+}
+
+/* Resetar alguns estilos globalmente */
+* {
+  box-sizing: border-box; /*border e padding incluidos ao tamanho do elemento*/
+  text-decoration: none; /*remover estilos de texto*/
+  margin: 0; /*remover margens padrões*/
+  padding: 0; /*remover afastamentos padrões*/
+  border: 0; /*remover bordas padrões*/
+  font-family: Helvetica, sans-serif; /*estilo de fonte padrão*/
+}
+
+/* Definir estilos globais*/
+html {
+  font-size: var(--fontSizeRoot1); /*tamanho da fonte padrão para o root (rem)*/
+  color: var(--color1); /*cor da fonte padrão*/
+}
+
+/* Estilos do body */
+body {
+  height: 100vh; /*altura = 100% da janela*/
+  width: 100vw; /*largura = 100% da janela*/
+}
+
+/* ((((((((((calculadora)))))))))) */
+/* Container da calculadora */
+#calcContainer {
+  display: flex; /*display flexível para organizar elementos filhos*/
+  width: 100%; /*largura = 100% do elemento pai*/
+  height: 100%; /*altura = 100% do elemento filho*/
+  overflow: auto; /*Inserir barra de rolagem caso o elemento filho seja maior*/
+  justify-content: center; /*alinhamento vertical*/
+  align-items: center; /*alinhamento horizontal*/
+}
+
+/* Div da calculadora */
+#divCalculator {
+  border: var(--border); /*borda = --boder*/
+  border-radius: var(--radius); /*arredondamento = --radius*/
+}
+
+/* Display da calculadora */
+#divDisplay {
+  color: var(--color1); /*cor da fonte = --color1*/
+  text-align: right; /*texto alinhado à direita*/
+  padding: 0.5rem; /*espaçamento interno = metade do tamanho padrão*/
+  margin: 1rem; /*margem = tamanho padrão*/
+  border: var(--border); /*borda = --border*/
+  border-radius: var(--radius); /*arredondamento = --radius*/
+  height: 4.5rem; /*altura = 4,5 vezes o tamanho padrão*/
+}
+
+/* Div dos botões da calculadora */
+#divKeys {
+  margin: 1rem; /*margem = tamanho padrão*/
+  display: grid; /*display em forma de grade*/
+  gap: 0.5rem; /*espaçamento entre as grades = metade do tamanho padrão*/
+  grid-template-columns: repeat(4, 1fr); /*4 colunas com uma fração do espaço totoal*/
+}
+
+/* Botões da calculadora */
+#divKeys button {
+  font-size: 1rem; /*tamanho da fonte = tamanho padrão*/
+  min-width: 3.5rem; /*largura mínima = 3,5 vezes o tamanho padrão*/
+  height: 3.5rem; /*altura mínima = 3,5 vezes o tamanho padrão*/
+  color: var(--color1); /*cor da fonte = --color1*/
+  background-color: var(--backgroundButton1); /*cor de fundo = --backgroundButton1*/
+  border-radius: var(--radius); /*arredondamento = --radius*/
+  transition: .3s; /*Transição (animação) entre hover, focus e active*/
+}
+
+/* Botões da calculadora ao passar o mouse */
+#divKeys button:hover {
+  background-color: var(--backgroundButton2); /*cor de fundo = --backgroundButton2*/
+  border: var(--border); /*borda = --boder*/
+}
+
+/* Botões da calculadora ao receber o focu */
+#divKeys button:focus {
+  background-color: var(--backgroundButton2); /*cor de fundo = --backgroundButton2*/
+  border: var(--border); /*borda = --boder*/
+}
+
+/* Botões da calculadora ativados */
+#divKeys button:active {
+  color: var(--backgroundButton2); /*cor da fonte = --backgroundButton2*/ 
+  background-color: var(--color1); /*cor de fundo = --color1*/
+}
+
+/* Botão C */
+#buttonKeyErase {
+  grid-column: 1 /span 2; /*iniciar na coluna 1, tamanho = 2 colunas*/
+}
+
+/* Botão = */
+#buttonKeyEqual {
+  grid-column: 3 /span 2; /*iniciar na coluna 3, tamanho = 2 colunas*/
+}
+
+/* classe backgroundColor */
+.backgroundColor {
+  background-color: var(--backColor1); /*cor de fundo = --backColor1*/
+}

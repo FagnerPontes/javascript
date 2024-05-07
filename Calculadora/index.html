@@ -1,0 +1,48 @@
+<!--Editar arquivo index.html-->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Adicionar link cdn icones bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- adicionar arquivo css -->
+  <link rel="stylesheet" type="text/css" href="styleCalculator.css">
+  <!-- adicionar arquivo javascript -->
+  <script src="scriptCalculator.js" type="text/javascript" defer></script>
+  <title>Calculadora</title>
+</head>
+
+<body>
+  <div id="calcContainer" class='backgroundColor'> <!-- container da calculadora -->
+    <div id="divCalculator" class='backgroundColor'> <!-- calculadora -->
+      <div id="divDisplay" class='backgroundColor'>0</div> <!-- display da calculadora -->
+      <div id="divKeys" class='backgroundColor'> <!-- espaço para os botões -->
+        <button value="7">7</button> <!-- botão 7 -->
+        <button value="8">8</button> <!-- botão 8 -->
+        <button value="9">9</button> <!-- botão 9 -->
+        <button value="plus">&plus;</button> <!-- botão + -->
+        <button value="4">4</button> <!-- botão 4 -->
+        <button value="5">5</button> <!-- botão 5 -->
+        <button value="6">6</button> <!-- botão 6 -->
+        <button value="minus">&minus;</button> <!-- botão - -->
+        <button value="1">1</button> <!-- botão 1 -->
+        <button value="2">2</button> <!-- botão 2 -->
+        <button value="3">3</button> <!-- botão 3 -->
+        <button value="mult">&times;</button> <!-- botão * -->
+        <button value="clear" title='clear'> <!-- botão backspace -->
+          <i class="bi bi-backspace"></i> <!-- icone inportado do bootstrap -->
+        </button>
+        <button value="0">0</button> <!-- botão 0 -->
+        <button value="decimal">,</button> <!-- botão , -->
+        <button value="divide">&divide;</button> <!-- botão / -->
+        <button id="buttonKeyErase" value="erase">C</button> <!-- botão C -->
+        <button id="buttonKeyEqual" value="calculate">&equals;</button> <!-- botão = -->
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
