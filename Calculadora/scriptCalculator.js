@@ -1,6 +1,7 @@
 //Editar arquivo scriptCalculator.js
 
 /*
+  Documentação:
   - querySelector: https://developer.mozilla.org/docs/Web/API/Document/querySelector
   - Objeto String:
     - includes(): https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/includes
