@@ -32,7 +32,7 @@ var myMap = new Map();
 var myKey = '';
 
 /* 
-Código html do campo onde a atividade que será inserida:
+Código html do campo onde a atividade será inserida:
 div class="divList">
   <h4>Atividade</h4>
   <button>
