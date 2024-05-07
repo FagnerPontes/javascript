@@ -1,0 +1,110 @@
+/*Editar arquivo styleToDo.css*/
+/* Criar variáveis */
+:root {
+  --backColor1: #333;/*cor de fundo*/
+  --backColor2: #222;/*cor de fundo*/
+  --color1: #ddd;/*cor da fonte*/
+  --colorHover: #fff;/*cor da fonte ao passar o mouse*/
+  --backgroundButton1: #223366;/*cor de fundo para botão*/
+  --backgroundButton2: #001144;/*cor de fundo para botão*/
+  --fontSizeRoot1: 16px;/*tamanho da fonte padrão*/
+  --border1: 1px solid #777777;/*borda*/
+}
+
+/*stilos gerais*/
+* {
+  box-sizing: border-box;/*border e padding fazem parte do tamanho*/
+  text-decoration: none;/*texto sem estilos*/
+  margin: 0;/*margem = 0*/
+  padding: 0;/*espaçamento interno = 0*/
+  border: 0;/*borda = 0*/
+}
+
+/*estilos padrões*/
+html {
+  font-size: var(--fontSizeRoot1); /*tamanho da fonte = --fontSizeRoot1*/
+  color: var(--color1);/*cor da fonte = --color1*/
+  background-color: var(--backColor1);/*cor de fundo = --backColor1*/
+  font-family: Helvetica, sans-serif;/*font = Helvetica*/
+}
+
+/*estilo do body*/
+body{
+  height: 100vh;
+  display: flex; /*Expande filhos até o limite da margem*/
+}
+
+/*div (toDoContainer) principal*/
+#toDoContainer {
+  width: 25rem;/*largura = 25 vezes o tamanho da fonte*/
+  margin: 3rem auto;/*margem superio e inferior = 3rem, margens laterais automáticas*/
+  border: var(--border1);/*borda = --border1*/
+  padding: 1rem;/*espaçamento interno = tamanho da fonte*/
+  border-radius: 5px;/*arredondamento de 5 pixels*/
+  background-color: var(--backColor2);/*cor de fundo = --backColor2*/
+  overflow-y: auto;/*fixar tamanho e exibir scrollbar se elemento filho for maior*/
+}
+
+/*estilo do buttom em toDoContainer*/
+#toDoContainer button {
+  cursor: pointer;/*estilo do mouse*/
+  color: var(--color1);/*cor da fonte = --color1*/
+  background-color: var(--backgroundButton1);/*cor de fundo = --backgroundButton1*/
+  width: 2rem;/*largura mínima = 2 vezes o tamanho da fonte*/
+  height: 2rem;/*altura mínima = 1.5 vezes o tamanho da fonte*/
+  border-radius: 5px;/*arredondamento = 5 pixels*/
+  font-size: 1rem;/*tamanho da fonte = tamanho da fonte padrão*/
+  display: flex;/*display flexível para posicionamento dos filhos*/
+  justify-content: center;/*alinhamento horizontal no centro*/
+  align-items: center;/*alinhamento vertical no centro*/
+  margin-left: 1rem;/*margem esquerda = tamanho da fonte*/
+}
+
+/*estilo do buttom em toDoContainer ao passar mouse*/
+#toDoContainer button:hover {
+  color: var(--colorHover);/*cor da fonte = --colorHover*/
+  background-color: var(--backgroundButton2);/*cor de fundo = --backgroundButton2*/
+  border: var(--border1);/*borda = --border1*/
+}
+
+/*estilo do input em toDoContainer*/
+#toDoContainer input {
+  height: 2rem;/*altura = duas vezes o tamanho da fonte*/
+  border-radius: 5px;/*arredondamento = 5 pixels*/
+  margin-top: .5rem;/*margem superior = metade da fonte*/
+  padding-left: .5rem;/*espaçamento esquerdo = metada da fonte*/
+}
+
+/*estilo do h1 em toDoContainer*/
+#toDoContainer h1 {
+  text-align: center;/*alinhamento vertical central*/
+}
+
+/*estilo da classe divForm em toDoContainer*/
+#toDoContainer .divForm {
+  margin-top: 1rem;/*margem superior = tamanho da fonte*/
+  display: flex;/*display flexível para posicionar elementos filhos*/
+  width: 100%;/*largura = 100% do elemento pai*/
+  padding-bottom: 0.5rem;/*afastamento inferior = metada da fonte*/
+  border-bottom: var(--border1);/*borda inferior = --border1*/
+  align-items: end;/*alinhamento vertical inferior*/
+}
+
+#toDoContainer .divForm form {
+  flex: 1;/*ocupa todo espaço disponível*/
+}
+
+#toDoContainer .divForm form input {
+  width: 100%;/*largura = 100% do elemento pai*/
+}
+
+#toDoContainer .divList {
+  display: flex;/*display flexível para posicionar elementos filhos*/
+  line-height: 3.5rem;/*altura da linha = três vezes e meio o tamanho da fonte*/
+  align-items: center;/*alinhamento vertical central*/
+  border-bottom: var(--border1);/*borda inferior = --border1*/
+}
+
+#toDoContainer .divList h4 {
+  flex: 1; /*ocupa todo espaço disponível*/
+}

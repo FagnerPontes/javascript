@@ -1,0 +1,55 @@
+<!-- Editar arquivo index.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Font Awesome bliblioteca de ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Adicionar arquivo styleToDo.css -->
+  <link rel="stylesheet" href="styleToDo.css">
+  <!-- Adicionar arquivo scriptToDo.js -->
+  <script src="scriptToDo.js" type="text/JavaScript" defer></script>
+  <title>To Do List</title>
+</head>
+
+<body>
+  <div id="toDoContainer"><!--Container princial-->
+    <h1>To-Do List</h1>
+    <div class="divForm"><!--div do campo de adição-->
+      <!--formulário para adicionar atividade-->
+      <form id="formAdd"> Adicionar atividade: <input type="text" id="inputAdd" placeholder="Nova atividade">
+      </form>
+      <button id='buttonAdd'><!--botão para adicionar atividade-->
+        <i class="fa-solid fa-plus"></i><!--ícone de adição-->
+      </button>
+    </div>
+    <!-- Conteúdo de edição -->
+    <div id="editContainer" class="divForm" style="display: none;"><!--Conteiner do campo de edição-->
+      <!--formulário para editar atividade-->
+      <form id="formEdit"> Editar atividade: <input type="text" id="inputEdit" placeholder="">
+      </form>
+      <button id="buttonEditConfirm"><!--botão para fazer edição-->
+        <i class="fa-solid fa-check"></i><!--ícone de confirmação-->
+      </button>
+      <button id="buttonEditCancel"><!--botão para cancelar edição-->
+        <i class="fa-solid fa-xmark"></i><!--ícone de cancelamento-->
+      </button>
+    </div>
+    <!-- Conteúdo de exibição -->
+    <div class="divList" style="display: none;"><!--conteiner do campo de exibição-->
+      <h4>Atividade</h4>
+      <button class="buttonEditar"><!--botão para edição-->
+        <i class="fa-solid fa-pen-to-square"></i><!--ícone de edição-->
+      </button>
+      <button class="buttonExcluir"><!--botão de exclusão-->
+        <i class="fa-solid fa-xmark"></i><!--ícone de exclusão-->
+      </button>
+    </div>
+  </div>
+</body>
+
+</html>
