@@ -1,5 +1,6 @@
 //Editar arquivo scriptToDo.js
 /*
+Documentação:
 getElementById: https://developer.mozilla.org/pt-BR/docs/Web/API/Document/getElementById
 Objeto Map(): https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Map
 appendChild: https://developer.mozilla.org/pt-BR/docs/Web/API/Node/appendChild
