@@ -1,0 +1,67 @@
+<!-- Editar arquivo index.html -->
+<!--
+Será criada uma rede neural que irá prever o próximo número em uma sequência lógica de 
+valores obedecendo a função y = 3x.
+A rede neural será treinada com:
+inputs: x = [0, 1, 2, 3, 4, 5];
+outputs y = [0, 3, 6, 9, 12, 15];
+Dessa forma, ao digitar valores para x a rede neural terá que obter valores próximos a 3x.
+-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- add cdn TensorFlow (lib de aprendizado de maquina do Google open sorce) -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"> </script>
+  <!-- add cdn chart.js (lib de gráficos open sorce) -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+  <!-- add scriptChart.js -->
+  <script src="scriptChart.js" type="text/JavaScript" defer></script>
+  <!-- add scriptMachineLearning.js -->
+  <script src="scriptMachineLearning.js" type="text/JavaScript" defer></script>
+  <title>Rede Neural</title>
+  <!-- Aplicar estilos css -->
+  <style>
+    * {
+      box-sizing: border-box;
+      /*border e padding incluidos ao tamanho do elemento*/
+      background-color: #0f0f14;
+      /*cor de fundo*/
+      color: #ccc;
+      /*cor da fonte*/
+      font-family: Helvetica, sans-serif;
+      /*estilo de fonte*/
+      font-size: large;
+      /*tamanho da fonte*/
+      margin-top: 1rem;
+      /*margem superior = tamanho da fonte*/
+    }
+
+    canvas {
+      width: 100%;
+      max-height: 70vh;
+    }
+
+    input {
+      height: 1.5rem;
+      /*altura = 1.5 vezes o tamanho da fonte*/
+      width: 7rem;
+      /*largura = 7 vezes o tamanho da fonte*/
+    }
+  </style>
+</head>
+
+<body>
+  <form id="myForm"> <!-- formulário para passar valores para a rede neural -->
+    <input id="myInput" type='number' title='inputAi'> <!-- escolher valores -->
+    <input type="submit" value="Enviar"> <!-- enviar valores -->
+  </form>
+  <div id="myDiv"></div> <!-- div para exibr resultado -->
+  <div>
+    <canvas id="myChart"></canvas> <!-- canvas com um gráfico dos resultados -->
+  </div>
+</body>
+
+</html>
