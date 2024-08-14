@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Personagens Jedi e Sith</title>
+</head>
+
+<body>
+ <div class="container">
+  <h1>Personagens Jedi e Sith</h1>
+  <button onclick="mostrarPersonagens()">Mostrar Personagens</button>
+  <div id="resultado"></div>
+ </div>
+ <script>
+  // Definindo o objeto personagem
+  const personagem = {
+   // Método para criar um personagem com os atributos especificados
+   criarAtributos: function (tipo, nome, forca) {
+    return {
+     tipo: tipo,
+     nome: nome,
+     forca: this.criarForca(),
+    };
+   },
+
+   // Função para simular o lançamento de dados e calcular a força do personagem
+   criarForca: function () {
+    let forca = 0;
+    for (let i = 0; i < 3; i++) {
+     forca += Math.floor(Math.random() * 6 + 1);
+    }
+    return forca;
+   },
+  };
+
+  // Criando o personagem Jedi
+  const jedi = personagem.criarAtributos('Jedi', 'Obi-Wan Kenobi');
+
+  // Criando o personagem Sith
+  const sith = personagem.criarAtributos('Sith', 'Darth Vader');
+
+  // Função para mostrar os personagens
+  function mostrarPersonagens() {
+   const resultadoDiv = document.getElementById('resultado');
+   resultadoDiv.innerHTML = `
+        <div class="personagem-info">
+          <h2>Personagem Jedi</h2>
+          <p>Tipo: ${jedi.tipo}</p>
+          <p>Nome: ${jedi.nome}</p>
+          <p>Força: ${jedi.forca}</p>
+        </div>
+        <div class="personagem-info">
+          <h2>Personagem Sith</h2>
+          <p>Tipo: ${sith.tipo}</p>
+          <p>Nome: ${sith.nome}</p>
+          <p>Força: ${sith.forca}</p>
+        </div>
+      `;
+  }
+ </script>
+</body>
+
+</html>
