@@ -1,0 +1,348 @@
+/* Editar arquivo styleTheme.css */
+
+/* variáveis responsáveis pelo tema */
+:root {
+  /*propriedades editadas no scriptTheme*/
+  --backColor1: none; /*cor para bacgroud-color*/
+  --backColor2: none; /*cor para bacgroud-color*/
+  --backColor3: none; /*cor para bacgroud-color*/
+  --buttonColor1: none; /*cor para bacgroud-color de botão*/
+  --buttonColor2: none; /*cor para bacgroud-color de botão*/
+  --buttonColor3: none; /*cor para bacgroud-color de botão*/
+  --fontColor1: none; /*cor para fonte*/
+  --fontColor2: none; /*cor para fonte*/
+  --fontColor3: none; /*cor para fonte*/
+  --border1:none; /*borda*/
+  --border2: none; /*borda*/
+  --border3: none; /*borda*/
+
+
+  /*propriedades NÃO editadas no scriptTheme*/
+  --fontSizeRoot1: 16px; /*tamanho da fonte padrão*/
+  --headerHeigth: 3.5rem; /*altura do cabeçalho*/
+  --footerHeigth: 2rem; /*altura do rodapé*/
+  --menuButtonHeight: 7rem; /*altura do botão dentro do menu*/
+  --iconSize: 3.5rem; /*tamanho dos icones*/
+}
+
+/* resetar algumas propriedade css */
+* {
+  box-sizing: border-box; /*border e padding incluidos ao tamanho do elemento*/
+  text-decoration: none; /*remover estilos de texto*/
+  margin: 0; /*remover margens padrões*/
+  padding: 0; /*remover afastamentos padrões*/
+  border: 0; /*remover bordas padrões*/
+  font-family: Helvetica, sans-serif; /*fonte padrão*/
+}
+
+html {
+  font-size: var(--fontSizeRoot1); /*tamanho da fonte padrão (rem) */
+  color: var(--fontColor1); /*cor da fonte padrão*/
+}
+
+/* cabeçalho */
+#myHeader {
+  position: fixed; /*posição fixa relativa a janela*/
+  top: 0; /*fixado na posição top (superior) = 0*/
+  left: 0; /*fixado na posição left (esquerda) = 0*/
+  width: 100vw; /*largura igual à 100% da largura da janela*/
+  display: flex; /*modo flexível para organização dos elementos filhos*/
+  height: var(--headerHeigth); /*altura igual à variável temática*/
+  background-color: var(--backColor1); /*cor de fundo igual à variável temática*/
+}
+
+/* parágrafo no cabeçalho */
+#myHeader p {
+  margin-left: 1rem; /*margem esquerda igual ao tamanho da fonte padrão*/
+  font-size: 2rem; /*duas vezes o tamanho da fonte padrão*/
+  display: flex; /*modo flexível para organização dos elementos filhos*/
+  flex: 1; /*ocupar todo espaço disponível*/
+  align-items: center; /*alinhamanto vertical central*/
+}
+
+/* botão no cabeçalho */
+#myHeader button {
+  width: var(--headerHeigth); /*largura igual à variável temática*/
+  height: calc(var(--headerHeigth) - .2rem); /*altura igual à variável temática*/
+  background-color: var(--buttonColor1); /*cor de fundo igual à variável temática*/
+  font-size: 2rem; /*tamanho da fonta igual à duas vezes o tamanho padrão*/
+  color: var(--fontColor1); /*cor da fonte igual à variável temática*/
+  border-radius: 10px; /*arredondamento da borda igual à 10 pixels*/
+  cursor: pointer; /*estilo do mouse*/
+  margin: .1rem;  /*margem = 0.1 x tamanho da fonte*/
+}
+
+/* botão no cabeçalho ao passar o mouse */
+#myHeader button:hover {
+  border: var(--border2); /*borda igual à variável temática*/
+  color: var(--fontColor2); /*cor da fonte igual à variável temática*/
+}
+
+/* botão ativado no cabeçalho */
+#myHeader button:active {
+  background-color: var(--buttonColor3); /*cor de fundo igual à variável temática*/
+  color: var(--fontColor3); /*cor da fonte igual à variável temática*/
+}
+
+/* botão desativado no cabeçalho */
+#myHeader button:disabled {
+  background-color: var(--buttonColor3); /*cor de fundo igual à variável temática*/
+  color: var(--fontColor3); /*cor da fonte igual à variável temática*/
+}
+
+/* rodapé */
+#myFooter {
+  position: fixed; /*posição fixa relativa a janela*/
+  bottom: 0; /*fixado na posição bottom (inferior) = 0*/
+  left: 0vw; /*fixado na posição left (esquerda) = 0*/
+  width: 100vw; /*largura igual à 100% da largura da janela*/
+  height: var(--footerHeigth); /*altura igual à variável temática*/
+  background-color: var(--backColor1); /*cor de fundo igual à variável temática*/
+  display: flex; /*modo flexível para organização dos elementos filhos*/
+  justify-content: center; /*alinhamento vertical central*/
+  align-items: center; /*alinhamanto vertical central*/
+}
+
+/* container que abriga os menus e a área de conteúdo */
+#myDivContainer {
+  position: fixed; /*posição fixa relativa a janela*/
+  top: var(--headerHeigth); /*fixado na posição top (superior) igual à variável temática*/
+  left: 0; /*fixado na posição left (esquerda) = 0*/
+  width: 100vw; /*largura igual à 100% da largura da janela*/
+  height: calc(100vh - var(--headerHeigth) - var(--footerHeigth)); /*altura = janela - cabeçalho - rodapé*/
+  border-top: var(--border1); /*borda superior igual à variável temática*/
+  border-bottom: var(--border1); /*borda inferior igual à variável temática*/
+  overflow: auto; /*fixar tamanho e exibir scrollbar se elemento filho for maior*/
+  display: flex; /*modo flexível para organização dos elementos filhos*/
+  /*flex-direction: será definido no @media (Responsividade)*/
+}
+
+/* área de conteúdo */
+#myDivCenter {
+  display: flex; /*display flexível para posicionar elementos filhos*/
+  height: 100%; /*altura igual à 100% do elemento pai (#myDivContainer)*/
+  background-color: var(--backColor1); /*cor de fundo igual à variável temática*/
+  flex: 1; /*ocupar todo espaço disponível*/
+  padding: .5rem; /*afastamento interno = metade da fonte*/
+  overflow: auto; /*fixar tamanho e exibir scrollbar se elemento filho for maior*/
+}
+
+/*container que receberá todos os paineis*/
+#myDivCenter .divCenterContent{
+  background-color: var(--backColor1); /*cor de fundo = --backColor1*/
+  display: none; /*display sem visibilidade*/
+  overflow: auto; /*fixar tamanho e exibir scrollbar se elemento filho for maior*/
+  border: var(--border2); /*borda = --border2*/
+  border-radius: 6px; /*arredondamento da borda = 6 pixels*/
+  flex-direction: row; /*direção do container no sentido column (vertical)*/
+  flex-wrap: wrap; /*empilhar linha quando necessáiro*/
+  margin-left: auto; /*margem esquerda automática para centralizar elemento*/
+  margin-right: auto; /*margem direita automática para centralizar elemento*/
+}
+
+/*painel inicial*/
+.divCenterContent .divChildHome {
+  min-width: 100%; /*largura mínima de 100% do elemnto pai*/
+  display: flex; /*display flexível para posicionar elementos filhos*/
+  flex-wrap: wrap; /*empilhar linha quando necessáiro*/
+  justify-content: center; /*(eixo principal) alinhamento horizontal centralizado*/
+  row-gap: .3rem; /*espaçamento entre elementos filhos*/
+  column-gap: .3rem; /*espaçamento entre elementos filhos*/
+}
+
+/* botões no menu */
+.divCenterContent .divChildHome button {
+  height: var(--menuButtonHeight); /*altura do botão igual à variável temática*/
+  width: var(--menuButtonHeight); /*largura do botão igual à variável temática*/
+  display: flex; /*display flexível para posicionamento dos elementos filhos*/
+  border: var(--border3); /*borda igual a variável --border3*/
+  align-items: center; /*(eixo transversal) alinhamento vertical centralizado*/ 
+  margin-top: .25rem; /*margem superior = 0.25 x tamnho da fonte*/
+  color: var(--fontColor1); /*cor da fonte = --fonteColor1*/
+}
+
+/* botões no menu ao passar o mouse*/
+.divCenterContent .divChildHome button:hover {
+  border: var(--border2); /*borda = --border2*/
+  border-radius: 10px; /*arredondamento = 10 pixels*/
+}
+
+/* botões no menu ao clicar */
+.divCenterContent .divChildHome button:active {
+  background-color: var(--buttonColor3); /*cor de fundo = à variável temática*/
+  color: var(--fontColor3); /*cor da fonte igual à variável temática*/
+}
+
+/*imagem do botão*/
+.divCenterContent .divChildHome button img{
+  height: 100%; /*altura = 100% do elemento pai*/
+  width: 100%; /*largura = 100% do elemento pai*/
+}
+
+/*imagem do botão ao passar o mouse*/
+.divCenterContent .divChildHome button img:hover {
+  border: var(--border2); /*borda = --border2*/
+  border-radius: 10px; /*arredondamento = 10 pixels*/
+}
+
+/*divisão superior dentro do divCenterContent*/
+.divCenterContent .divChildTop{
+  min-width: calc(100% - 2rem); /*largura mínima = 100% do elemento pai*/
+  margin: 1rem; /*margem = 1 x tamanho da fonte padrão*/
+  border-bottom: var(--border1); /*borda inferior = --border1*/
+  min-height: 10rem; /*altura mínima = 10rem*/
+}
+
+/*título dentro do divChildTop */
+.divCenterContent .divChildTop h1{
+  padding-bottom: .5rem; /*afantamento inferior = 0.5 x tamnho da fonte*/
+  border-bottom: var(--border1); /*borda = --border1*/
+  text-align: center; /*alinhamento do texto centralizado*/
+  font-size: 1.5rem; /*tamanho da fonte = 1.5 x tamanho da fonte*/
+}
+
+/*div filha a esquerda dentro de divCenterContent*/
+.divCenterContent .divChildLeft{
+  width: 50%; /*largura = 50% do elemento pai*/
+  margin-bottom: 1rem; /*margem inferior = tamanho da fonte padrão*/
+  padding-top: .5rem; /*afastamento interno superior = metade da fonte*/
+  overflow-y: auto; /*fixar tamanho e exibir scrollbar se elemento filho for maior*/
+  flex: 1; /*ocupar todo espaço disponível*/
+  background-color: var(--backColor2); /*cor de fundo = --backColor2*/
+  border-radius: 6px; /*arredondamento = 6 pixels*/
+  margin-right: 1rem; /*margem direita = 1 x tamanho da fonte*/
+  margin-left: 1rem; /*margem esquerda = 1 x tamanho da fonte*/
+}
+
+/*título dentro de divChildLeft*/
+.divCenterContent .divChildLeft h2{
+  padding-left: .5rem; /*afastamento interno = 0.5 x tamanho da fonte*/
+  font-size: 1.2rem; /*tamanho da fonte = 1.2 x tamanho da fonte padrão*/
+}
+
+/*divisões dentro de divChildLeft (inputs)*/
+.divCenterContent .divChildLeft div{
+  display: flex; /*display flexível para posicionamento dos elementos filhos*/
+  align-items: center; /*(eixo transversal) alinhamento vertical centralizado*/
+  margin-top: .5rem; /*margem superior = 0.5 x tamnho da fonte*/
+  padding-left: 1rem; /*afastamento esquerdo interno = 1 x tamanho da fonte*/
+  padding-right: .5rem; /*afastamento esquerdo interno = 1 x tamanho da fonte*/
+  font-size: .8rem; /*tamanho da fonte = 0.8 x tamanho da fonte padrão*/
+}
+
+/*inputs dentro de divChildLeft div*/
+.divCenterContent .divChildLeft div input{
+  min-width: 1.5rem; /*lagura mínima = 1.5 x tamanho da fonte*/
+  min-height: 1.5rem; /*altura mínima = 1.5 x tamanho da fonte*/
+  margin: .5rem; /*margem = 0.5 x tamanho da fonte*/
+}
+
+/*div filha a direita dentro de divCenterContent*/
+.divCenterContent .divChildRight{
+  width: 50%; /*largura = a 50% do elemento pai*/
+  flex: 1; /*ocupar todo espaço disponível*/
+  display: flex; /*display flex para posicionamento dos elementos filhos*/
+  flex-direction: column; /*elementos filhos posicionados em sentido de coluna (verticalmente)*/
+  margin-right: 1rem; /*margem direita = 1 x tamanho da fonte padrão*/
+  margin-left: 1rem; /*margem esquerda = 1 x tamanho da fonte padrão*/
+}
+
+/*título dentro de divChildRight*/
+.divCenterContent .divChildRight h2{
+  font-size: 1.2rem; /*tamanho da fonte = 1.2 x tamanho da fonte padrão*/
+}
+
+
+.divCenterContent .divChildRight form{
+  display: flex; /*display flexível para organizar os elementos filhos*/
+  flex: 1; /*ocupar todo espaço disponível no elemento pai*/
+  margin-top: 1rem; /*margem superior = 1 x tamanho da fonte*/
+  margin-bottom: 1rem; /*margem inferior = 1 x tamanho da fonte*/
+}
+
+.divCenterContent .divChildRight form textarea{
+  padding: 1rem; /*afastamente interno = 1 x tamanho da fonte*/
+  flex: 1; /*ocupar todo espaço disponível no elemento pai*/
+  background-color: var(--backColor2); /*cor de fundo = --backColor2*/
+  color: var(--fontColor1); /*cor da fonte = --fontColor1*/
+  resize: none; /*não permite redimensionamento*/
+  border-radius: 10px; /*arredondamento da borda = 10 pixels*/
+  font-size: 1rem; /*tamanho da fonte = 1 x tamanho da fonte padrão*/
+}
+
+.divCenterContent .divChildRight button {
+  min-height: 4rem; /*altura = --menuButtonHeight*/
+  width: 15rem; /*largura = 15 x tamanho da fonte*/
+  margin-left: auto; /*posicionar elemento o máximo possível para a direita (pai-flex)*/
+  margin-right: auto; /*posicionar elemento o máximo possível para a direita (pai-flex)*/
+  border: var(--border3); /*borda = --border3*/
+  margin-top: .25rem; /*margem superior = 0.25 x tamanho da fonte*/
+  background-color: var(--buttonColor2); /*cor de fundo = --buttonColor2*/
+  border-radius: 10px; /*arredondamento = 10 pixels*/
+  font-size: 1.5rem; /*tamanho da fonte = 1.5 x tamanho da fonte padrão*/
+  color: var(--fontColor1); /*cor fa fonte = --fontColor1*/
+} 
+
+.divCenterContent .divChildRight button:hover {
+  border: var(--border2); /*borda = --border2*/
+  background-color: var(--buttonColor1); /*cor de fundo = --buttonColor1*/
+  color: var(--fontColor2); /*cor da fonte = --fontColor2*/
+}
+
+.divCenterContent .divChildRight button:active {
+  background-color: var(--buttonColor3); /*cor de fundo = --buttonColor3*/
+  color: var(--fontColor3); /*cor da fonte = --fontColor3*/
+}
+
+#myDivRight h1{
+  margin-top: 1rem; /*margem superior = 1 x tamanho da fonte padrão*/
+  margin-bottom: 1rem; /*margem inferior = 1 x tamanho da fonte padrão*/
+  text-align: center; /*alinhamento do texto centralizado*/
+  font-size: 1.5rem; /*tamanh da fonte = 1.5 x tamanho da fonte padrão*/
+}
+
+#myDivRight p{
+  font-size: .8rem; /*tamanh da fonte = 0.8 x tamanho da fonte padrão*/
+  margin-top: 1rem; /*margem superior = 1 x tamanho da fonte padrão*/
+  margin-bottom: 1rem; /*margem inferior = 1 x tamanho da fonte padrão*/
+  text-align: left; /*texto alinhado à esquerda*/
+  line-height: 1.2rem; /*altura da linha = 1.2 x tamanho da fonte padrão*/
+}
+
+/*((((((((((RESPONSIVIDADE))))))))))*/
+
+/*tela mobile (menores que 800px)*/
+@media only screen and (max-width: 799px) {
+  #myDivCenter .divCenterContent{
+    max-width: 100%; /*largura mínima = 100% do elemento pai*/
+  }
+
+  .divCenterContent .divChildLeft{
+    min-height: 200px;
+    min-width: calc(100% - 2rem);
+  }
+
+  .divCenterContent .divChildRight{
+    min-width: calc(100% - 2rem);
+  }
+}
+
+/*tela monitor (maiores que 800px)*/
+@media only screen and (min-width: 800px) {
+  #myDivCenter .divCenterContent{
+    min-width: 25%; /*largura mínima = 25% do elemento pai*/
+    width: 75%; /*largura = 75% do elemento pai*/
+    height: 100%;
+  }
+
+  .divCenterContent .divChildLeft{
+    height: calc(100% - 13rem);
+    min-height: 220px;
+    min-width: calc(50% - 2rem);
+  }
+
+  .divCenterContent .divChildRight{
+    height: calc(100% - 13rem);
+    min-width: calc(50% - 2rem);
+  }
+}

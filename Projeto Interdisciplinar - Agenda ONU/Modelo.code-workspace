@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "Modelo1"
+		},
+		{
+			"path": "Modelo2"
+		},
+		{
+			"path": "Modelo3"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Modelo2"
+	}
+}
