@@ -1,0 +1,49 @@
+1. Configuração do Git no VSCode
+Instalar o Git:
+
+Certifique-se de que o Git está instalado no seu computador. Você pode baixar e instalar o Git a partir do site oficial do Git.
+Configurar o Git no VSCode:
+
+Abra o VSCode.
+Abra o terminal integrado do VSCode (`Ctrl + ``) e configure seu nome e e-mail do Git, se ainda não estiver configurado:
+bash
+Copiar código
+git config --global user.name "Seu Nome"
+git config --global user.email "seuemail@example.com"
+2. Clonar um Repositório GitHub no VSCode
+Abrir o Repositório:
+
+No VSCode, vá para o menu View (Visualizar) e selecione Source Control (Controle de Código-Fonte) ou use o atalho Ctrl+Shift+G.
+Clique no ícone de Clone Repository (Clonar Repositório) que aparece na barra lateral do Source Control.
+Fornecer a URL do Repositório:
+
+Você será solicitado a fornecer a URL do repositório GitHub que deseja clonar. Cole a URL do repositório e pressione Enter.
+Escolha o diretório onde deseja clonar o repositório e aguarde o processo ser concluído.
+3. Conectar ao GitHub
+Autenticação no GitHub:
+
+Se você ainda não estiver autenticado no GitHub, pode ser necessário configurar uma autenticação. O VSCode pode solicitar que você entre na sua conta do GitHub.
+Clique em Sign in to GitHub (Entrar no GitHub) quando solicitado e siga as instruções para autenticação via navegador.
+Instalar Extensões Úteis:
+
+Instale a extensão GitHub Pull Requests and Issues do VSCode para gerenciar pull requests e problemas diretamente do editor.
+Para instalar a extensão:
+Vá para a aba Extensions (Extensões) no VSCode (Ctrl+Shift+X).
+Pesquise por GitHub Pull Requests and Issues e clique em Install (Instalar).
+4. Usar Controle de Código-Fonte no VSCode
+Visualizar Alterações:
+
+No painel Source Control (Controle de Código-Fonte), você pode visualizar as alterações nos arquivos, criar commits e sincronizar com o repositório remoto.
+Fazer Commits e Push:
+
+Após fazer alterações em seus arquivos, vá para a aba Source Control (Controle de Código-Fonte), adicione arquivos ao staging area clicando no ícone de +, e crie um commit.
+Use o botão Sync Changes (Sincronizar Mudanças) para realizar o push das suas mudanças para o repositório remoto no GitHub.
+Gerenciar Pull Requests e Issues:
+
+Use a extensão GitHub Pull Requests and Issues para visualizar, criar e gerenciar pull requests e problemas diretamente no VSCode.
+Resumo:
+Clonar Repositório: Use o comando de clonagem no VSCode para baixar um repositório do GitHub.
+Configuração do Git: Certifique-se de que o Git está configurado no seu ambiente.
+Autenticação: Autentique-se no GitHub através do VSCode se necessário.
+Controle de Código-Fonte: Use as funcionalidades do Source Control para gerenciar commits e sincronizar mudanças.
+Com essas configurações, você poderá gerenciar seu código e colaborar com outros desenvolvedores de forma eficiente diretamente do VSCode. Se tiver alguma dúvida ou encontrar algum problema específico, sinta-se à vontade para perguntar!
