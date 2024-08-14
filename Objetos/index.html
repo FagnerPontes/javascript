@@ -44,20 +44,17 @@
 
   // Função para mostrar os personagens
   function mostrarPersonagens() {
-   const resultadoDiv = document.getElementById('resultado');
-   resultadoDiv.innerHTML = `
-        <div class="personagem-info">
-          <h2>Personagem Jedi</h2>
-          <p>Tipo: ${jedi.tipo}</p>
-          <p>Nome: ${jedi.nome}</p>
-          <p>Força: ${jedi.forca}</p>
-        </div>
-        <div class="personagem-info">
-          <h2>Personagem Sith</h2>
-          <p>Tipo: ${sith.tipo}</p>
-          <p>Nome: ${sith.nome}</p>
-          <p>Força: ${sith.forca}</p>
-        </div>
+   const divResultado = document.getElementById('resultado');
+   divResultado.innerText = `
+          Personagem Jedi
+          Tipo: ${jedi.tipo}
+          Nome: ${jedi.nome}
+          Força: ${jedi.forca}
+          
+          Personagem Sith
+          Tipo: ${sith.tipo}
+          Nome: ${sith.nome}
+          Força: ${sith.forca}
       `;
   }
  </script>
