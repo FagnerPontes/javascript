@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <!-- Incluindo os scripts do Firebase Modular -->
+ <title>Meu Aplicativo</title>
+</head>
+
+<body>
+ <h1>Meu Aplicativo</h1>
+ <form id="registrationForm">
+  <div class="divForm">
+   <p id="emailError"></p>
+   <p>Email:<input type="email" id="email" placeholder="Email" required></p>
+  </div>
+  <div class="divForm">
+   <p id="passwordError"></p>
+   <p>Senha:<input type="password" id="password" placeholder="Senha com 6 digitos" required></p>
+  </div>
+  <div class="divForm">
+   <p>Repita sua senha: <input type="password" id="passwordConfirm" placeholder="Repita sua senha" required></p>
+  </div>
+  <button type="submit" id="registerButton">Registrar</button>
+ </form>
+ <div id="divConcluido" style='display: none'>
+  <p>Cadastramento realizado com sucesso</p>
+  <button>
+   <a href="index.html">Retornar a página de login</a>
+  </button>
+ </div>
+</body>
+<script type="module" src="script22.js"></script>
+
+</html>
