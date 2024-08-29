@@ -198,7 +198,6 @@ html {
   max-width: 100%;
   background-color: var(--backColor1); /*cor de fundo = --backColor1*/
   z-index: 99; /*nivel de visibilidade no eixo z (profundidade - eixo frontal)*/
-  display: none; /*display sem visibilidade*/
   overflow: auto; /*fixar tamanho e exibir scrollbar se elemento filho for maior*/
   border: var(--border2); /*borda = --border2*/
   border-radius: 6px; /*arredondamento da borda = 6 pixels*/
